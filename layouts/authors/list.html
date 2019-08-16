@@ -29,7 +29,7 @@
       <ul>
         {{ range $query }}
         <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ dateFormat "2006" .Date }})
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ dateFormat "2006" .Date }}). {{ .Params.publication | markdownify }}
         </li>
         {{ end }}
       </ul>
@@ -63,7 +63,7 @@
       <ul>
         {{ range $query }}
         <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ dateFormat "Jan. 1, 2006" .Date }})
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>, {{ .Params.location | markdownify }}, {{ dateFormat "Jan. 1, 2006" .Date }} 
         </li>
         {{ end }}
       </ul>
